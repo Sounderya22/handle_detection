@@ -39,3 +39,29 @@ results[0].save(filename='output.jpg')
 ```
 
 The `best.pt` file is in the runs directory, both for 50 and 70 epochs. 
+
+---
+
+## Final Evaluation
+
+| Metric     | Value  |
+|------------|--------|
+| True Positives (TP)  | 309 |
+| False Positives (FP) | 38  |
+| False Negatives (FN) | 41  |
+| **Precision**        | 89.1% |
+| **Recall**           | 88.3% |
+| **F1 Score**         | 88.7% |
+
+### Metric Formulas
+
+- **Precision** = TP / (TP + FP)  
+  = 309 / (309 + 38) ≈ **0.891**
+
+- **Recall** = TP / (TP + FN)  
+  = 309 / (309 + 41) ≈ **0.883**
+
+- **F1 Score** = 2 × (Precision × Recall) / (Precision + Recall)  
+  = 2 × 0.891 × 0.883 / (0.891 + 0.883) ≈ **0.887**
+
+ The model performs well overall, with strong balance between identifying true handles and avoiding false alarms.
